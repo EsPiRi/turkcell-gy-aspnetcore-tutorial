@@ -10,36 +10,5 @@
 
 <div>Günün tarihi: @DateTime.Now.ToShortDateString()</div>
 
-@{
-    var datetime = DateTime.Now.ToShortDateString();
-    var message = "merhaba";
-    @:Bugünün tarihi : @datetime
-
-    
-
-    <div>mesaj: @message</div>
-    <text>Example Text: @datetime </text>
-}
-
-@if (1==1)
-{
-   <p>Doğru</p> 
-}
-else if(DateTime.IsLeapYear(DateTime.Now.Year)){
-    <p>Artık yıl</p>
-}
-else
-{
-    <h1>@alert</h1>
-    <p>Yanlış</p>
-}
-
-@for (int i = 0; i < 10; i++)
-{
-    <p>@i</p>
-}
-
-@foreach (var item in Enumerable.Range(1,10).ToList())
-{
-    <p>@item</p>
-}
+<partial name="_MenuPartialView"/>
+@await Html.PartialAsync("_MenuPartialView")

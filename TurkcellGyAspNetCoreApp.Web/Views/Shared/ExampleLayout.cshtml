@@ -9,6 +9,7 @@
 <body>
     <header>
         <div>header</div>
+        @await RenderSectionAsync("header", required: false)
     </header>
     <div class="container">
         <main role="main" class="pb-3">
@@ -18,6 +19,7 @@
 
     <footer>
         <div>footer</div>
+        @await RenderSectionAsync("footer", required: false)
     </footer>
     
     @await RenderSectionAsync("Scripts", required: false)
