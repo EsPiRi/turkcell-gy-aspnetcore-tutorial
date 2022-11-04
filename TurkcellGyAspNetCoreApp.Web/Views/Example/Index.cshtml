@@ -1,29 +1,15 @@
-﻿
+﻿@using TurkcellGyAspNetCoreApp.Web.Controllers;
 @{
     ViewData["Title"] = "Index";
 
 }
 
-<h1>Example Controller, Index sayfası</h1>
+<h1>Example Controller, Index page</h1>
 
-@{
-    var name = ViewBag.name;
-    <p>@name</p>
-    
-}
+@model List<Product>;
 
-<p>@name</p>
-<p>@ViewBag.name</p>
-
-
-<hr/>
-<p>Yaş: @ViewData["age"]</p>
-<h1>İsimler</h1>
-@foreach (var item in ViewData["names"] as List<string>)
+    @foreach (var item in Model)
 {
-    <p>@item</p>
+    <p>@item.Id - @item.Name</p>
 }
-<p>@ViewBag.person.Id</p>
-<p>@ViewBag.person.name</p>
-<p>@ViewBag.person.age</p>
 
