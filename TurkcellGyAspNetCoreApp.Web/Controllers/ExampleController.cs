@@ -2,25 +2,25 @@
 
 namespace TurkcellGyAspNetCoreApp.Web.Controllers
 {
-    public class Product
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
+    //public class Product
+    //{
+    //    public int Id { get; set; }
+    //    public string Name { get; set; }
 
-    }
+    //}
     public class ExampleController : Controller
     {
         public IActionResult Index()
         {
-            var productList=new List<Product>()
-            {
-                new(){Id=1,Name="Kalem"},
-                new(){Id=2,Name="Defter"},
-                new(){Id=3,Name="Silgi"}
-            };
+            //var productList=new List<Product>()
+            //{
+            //    new(){Id=1,Name="Kalem"},
+            //    new(){Id=2,Name="Defter"},
+            //    new(){Id=3,Name="Silgi"}
+            //};
             
             
-            return View(productList);
+            return View(/*productList*/);
         }
         public IActionResult Index3()
         {
